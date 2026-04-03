@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homenagem ao Melhor Pai</title>
+    <title>Homenagem ao Meu Melhor Amigo</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
         :root { 
             --bg: #1a1a1a; --sidebar: #222; --text: #e0e0e0; 
-            --gold: #ffcc00; --comment: #6a9955; 
+            --gold: #ffcc00; --comment: #6a9955; --blue: #569cd6;
         }
 
         body { 
             background-color: var(--bg); color: var(--text); 
             font-family: 'JetBrains Mono', monospace; margin: 0; padding: 0;
+            overflow-x: hidden;
         }
 
         .container { display: flex; min-height: 100vh; }
@@ -22,41 +23,52 @@
         
         .editor { flex: 1; padding: 0; display: flex; flex-direction: column; }
 
-        /* Banner de Aniversário no Topo */
         .birthday-header { 
             background: linear-gradient(90deg, #252526 0%, #2d2d30 100%);
             color: var(--gold); padding: 20px; text-align: center;
             border-bottom: 1px solid #444; font-weight: bold; font-size: 18px;
         }
 
-        .content-area { padding: 25px; max-width: 800px; margin: 0 auto; }
+        .content-area { padding: 25px; max-width: 850px; margin: 0 auto; }
 
-        /* Estilizando a sua frase como um comentário elegante */
-        .dedicatoria { 
-            color: var(--comment); font-style: italic; font-size: 16px;
-            line-height: 1.6; margin-bottom: 40px; border-left: 3px solid var(--comment);
+        .dedicatoria-topo { 
+            color: var(--comment); font-style: italic; font-size: 14px;
+            line-height: 1.6; margin-bottom: 30px; border-left: 3px solid var(--comment);
             padding-left: 20px;
         }
 
-        .gallery { display: flex; flex-direction: column; gap: 40px; }
+        /* Vídeo e Fotos */
+        .media-wrapper {
+            margin-bottom: 40px; border-radius: 15px; overflow: hidden;
+            border: 1px solid #3e3e3e; background: #000;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        video { width: 100%; display: block; }
+        .father-photo { width: 100%; display: block; height: auto; }
+        .photo-card { margin-bottom: 40px; }
+        .caption { padding: 15px; font-size: 13px; color: #aaa; text-align: center; font-style: italic; }
+
+        /* MENSAGEM FINAL (Aumentada e Estilizada) */
+        .mensagem-final { 
+            margin-top: 60px; padding: 40px 20px; border-top: 1px solid #333;
+            text-align: center; line-height: 1.8;
+        }
         
-        .photo-card { 
-            background: #252526; border-radius: 15px; overflow: hidden;
-            border: 1px solid #3e3e3e; box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        .texto-emocionante { 
+            color: var(--gold); 
+            font-size: 20px; /* Letra aumentada conforme pedido */
+            font-weight: 700;
+            white-space: pre-wrap; /* Mantém as quebras de linha */
+            display: block;
+            margin-bottom: 30px;
         }
 
-        .father-photo { width: 100%; display: block; height: auto; transition: transform 0.3s; }
-        .father-photo:hover { transform: scale(1.02); }
-
-        .caption { 
-            padding: 20px; font-size: 14px; color: #aaa; text-align: center;
-            font-style: italic; background: #1e1e1e; border-top: 1px solid #333;
-        }
+        .status-code { color: var(--blue); font-size: 14px; opacity: 0.8; }
 
         @media (max-width: 600px) { 
             .sidebar { display: none; }
-            .birthday-header { font-size: 15px; padding: 15px; }
-            .dedicatoria { font-size: 14px; }
+            .texto-emocionante { font-size: 17px; }
+            .content-area { padding: 15px; }
         }
     </style>
 </head>
@@ -70,7 +82,7 @@
             </div>
 
             <div class="content-area">
-                <div class="dedicatoria">
+                <div class="dedicatoria-topo">
                     /* <br>
                     &nbsp;* Feliz aniversario Pai. Não consigo dizer o quanto <br>
                     &nbsp;* te amo em palavras então, tentarei colocar em <br>
@@ -78,26 +90,36 @@
                     &nbsp;*/
                 </div>
 
-                <div class="gallery">
-                    <div class="photo-card">
-                        <img src="foto1.jpg" class="father-photo">
-                        <div class="caption">Sempre ao meu lado em todos os momentos.</div>
-                    </div>
-                    
-                    <div class="photo-card">
-                        <img src="foto2.jpg" class="father-photo">
-                        <div class="caption">Exemplo de força e alegria!</div>
-                    </div>
+                <div class="media-wrapper">
+                    <video controls poster="foto1.jpg">
+                        <source src="video-pai.mp4" type="video/mp4">
+                    </video>
+                </div>
 
-                    <div class="photo-card">
+                <div class="gallery">
+                    <div class="media-wrapper photo-card">
+                        <img src="foto1.jpg" class="father-photo">
+                        <div class="caption">Sempre ao meu lado.</div>
+                    </div>
+                    <div class="media-wrapper photo-card">
+                        <img src="foto2.jpg" class="father-photo">
+                        <div class="caption">Exemplo de força.</div>
+                    </div>
+                    <div class="media-wrapper photo-card">
                         <img src="foto3.jpg" class="father-photo">
-                        <div class="caption">Onde tudo começou. Sempre meu herói!</div>
+                        <div class="caption">Onde tudo começou.</div>
                     </div>
                 </div>
 
-                <p style="color: #569cd6; font-size: 12px; margin-top: 50px; text-align: center; opacity: 0.6;">
-                    Sou Ruim com Palavras, mas muito obrigado por tudo pai, você desde o começo sempre ajudando todo mundo e eu Não consegui entregar o mesmo, Você hoje não é só meu pai é Meu melhor amigo, meu educador e por fim alguem que posso contar sempre, independente da situação
-                </p>
+                <div class="mensagem-final">
+                    <span class="texto-emocionante">
+Sou Ruim com Palavras, mas muito obrigado por tudo pai, você desde o começo sempre ajudando todo mundo e eu Não consegui entregar o mesmo, Você hoje não é só meu pai é Meu melhor amigo, meu educador e por fim alguem que posso contar sempre, independente da situação, Obrigado por me apoiar e Nunca desistir de nós lembre que sempre estarei junto a você e quando você menos esperar estarei ao seu lado, andando de Harley ou até mesmo Jogando um video game, Como os velhos tempos.
+                    </span>
+                    
+                    <div class="status-code">
+                        System.out.println("Status: AMOR_INFINITO");
+                    </div>
+                </div>
             </div>
         </div>
     </div>
