@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System.out.println("Feliz Aniversário!");</title>
+    <title>Feliz Aniversário, Pai!</title>
     <style>
-        /* Importando uma fonte de programador profissional */
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
         :root { 
@@ -24,19 +23,75 @@
             font-family: 'JetBrains Mono', monospace; 
             margin: 0; 
             display: flex; 
-            height: 100vh; 
-            overflow: hidden; 
+            height: 100vh;
         }
 
-        .sidebar { width: 45px; background: var(--sidebar); border-right: 1px solid #333; display: flex; flex-direction: column; align-items: center; padding-top: 20px; font-size: 18px; color: #858585; user-select: none;}
+        .sidebar { width: 50px; background: var(--sidebar); border-right: 1px solid #333; display: flex; flex-direction: column; align-items: center; padding-top: 20px; font-size: 20px; flex-shrink: 0; }
         
-        .editor { flex: 1; padding: 20px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #444 #1e1e1e; }
-        .editor::-webkit-scrollbar { width: 8px; }
-        .editor::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        .editor { flex: 1; padding: 20px; overflow-y: auto; }
         
-        .line-numbers { color: #858585; text-align: right; padding-right: 20px; font-size: 13px; float: left; user-select: none; }
+        .line-numbers { color: #858585; text-align: right; padding-right: 20px; font-size: 14px; float: left; user-select: none; line-height: 1.7; }
         
-        /* Ajuste na largura do conteúdo para Desktop */
-        .code-content { float: left; font-size: 14px; line-height: 1.7; white-space: pre; width: calc(100% - 80px); max-width: 900px; }
+        .code-content { float: left; font-size: 14px; line-height: 1.7; white-space: pre-wrap; width: calc(100% - 80px); }
         
-        h1 { font-size: 18px; color: #4
+        h1 { font-size: 18px; color: #4ec9b0; margin: 0 0 20px 0; }
+        
+        .gallery-block { margin: 20px 0; border: 1px solid #3e3e3e; border-radius: 12px; padding: 15px; background: #252526; display: block; clear: both; }
+        
+        .java-loop { color: var(--comment); font-style: italic; display: block; margin-bottom: 15px; }
+
+        .photo-card { margin-bottom: 25px; border-radius: 12px; overflow: hidden; background: #1e1e1e; border: 1px solid #444; }
+        
+        .father-photo { width: 100%; max-width: 500px; display: block; margin: 0 auto; height: auto; }
+        
+        .photo-caption { padding: 12px; font-size: 12px; color: #858585; text-align: center; font-style: italic; border-top: 1px solid #333; }
+
+        .keyword { color: var(--key); font-weight: bold; } 
+        .string { color: var(--string); } 
+        .comment { color: var(--comment); font-style: italic; } 
+        .func { color: var(--func); }
+
+        @media (max-width: 600px) { 
+            .sidebar { display: none; }
+            .line-numbers { display: none; }
+            .code-content { width: 100%; font-size: 12px; float: none; }
+            .father-photo { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">📁<br>🔍<br>⚙️</div>
+    <div class="editor">
+        <h1>AniversarioPai.java</h1>
+        <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29</div>
+        <div class="code-content"><span class="keyword">package</span> br.com.familia.andrade;
+
+<span class="comment">/**
+ * Feliz aniversario Pai. Não consigo dizer o quanto 
+ * te amo em palavras então, tentarei colocar em 
+ * forma de codigo.
+ */</span>
+<span class="keyword">public class</span> <span style="color: #4ec9b0;">HomenagemCompleta</span> {
+
+    <span class="keyword">public static void</span> <span class="func">main</span>(String[] args) {
+        
+        Pai heroi = PaiRepository.<span class="func">findById</span>(<span class="string">"MEU_EXEMPLO"</span>);
+        
+        <span class="comment">// Iniciando renderização da Galeria de Memórias...</span>
+        <div class="gallery-block">
+            <span class="java-loop">for (Memoria m : heroi.getMemorias()) { render(m); }</span>
+            
+            <div class="photo-card">
+                <img src="foto1.jpg" alt="Memória 1" class="father-photo">
+                <div class="photo-caption">O início de tudo.</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto2.jpg" alt="Memória 2" class="father-photo">
+                <div class="photo-caption">Sempre ao meu lado.</div>
+            </div>
+
+        </div>
+
+        System.out.<span class="func">println</span>(<span class="string">"Status do Sistema: AMOR_INFINITO"</span>);
+        System.out.<span class
