@@ -3,83 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homenagem de Aniversário - Pai</title>
+    <title>Homenagem ao Melhor Pai</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
         :root { 
-            --bg: #1e1e1e; --sidebar: #252526; --text: #d4d4d4; 
-            --key: #569cd6; --string: #ce9178; --comment: #6a9955; --func: #dcdcaa; 
+            --bg: #1a1a1a; --sidebar: #222; --text: #e0e0e0; 
+            --gold: #ffcc00; --comment: #6a9955; 
         }
 
         body { 
             background-color: var(--bg); color: var(--text); 
             font-family: 'JetBrains Mono', monospace; margin: 0; padding: 0;
-            overflow-x: hidden; /* Permite rolagem vertical */
         }
 
         .container { display: flex; min-height: 100vh; }
-        .sidebar { width: 50px; background: var(--sidebar); border-right: 1px solid #333; flex-shrink: 0; padding-top: 20px; text-align: center; color: #858585; }
-        .editor { flex: 1; padding: 20px; }
+        .sidebar { width: 45px; background: var(--sidebar); border-right: 1px solid #333; flex-shrink: 0; padding-top: 20px; text-align: center; color: #555; }
         
-        .line-numbers { color: #858585; text-align: right; padding-right: 20px; font-size: 14px; float: left; user-select: none; line-height: 1.7; }
-        .code-content { float: left; font-size: 14px; line-height: 1.7; white-space: pre-wrap; width: calc(100% - 80px); }
-        
-        h1 { font-size: 18px; color: #4ec9b0; margin: 0 0 20px 0; }
-        
-        .gallery { margin: 25px 0; border: 1px solid #3e3e3e; border-radius: 12px; padding: 15px; background: #252526; clear: both; }
-        .photo-card { margin-bottom: 30px; border-radius: 12px; overflow: hidden; background: #1e1e1e; border: 1px solid #444; }
-        .father-photo { width: 100%; max-width: 500px; display: block; margin: 0 auto; height: auto; }
-        .caption { padding: 15px; font-size: 12px; color: #b0b0b0; text-align: center; font-style: italic; border-top: 1px solid #333; }
+        .editor { flex: 1; padding: 0; display: flex; flex-direction: column; }
 
-        .keyword { color: var(--key); font-weight: bold; } 
-        .string { color: var(--string); } 
-        .comment { color: var(--comment); font-style: italic; } 
-        .func { color: var(--func); }
+        /* Banner de Aniversário no Topo */
+        .birthday-header { 
+            background: linear-gradient(90deg, #252526 0%, #2d2d30 100%);
+            color: var(--gold); padding: 20px; text-align: center;
+            border-bottom: 1px solid #444; font-weight: bold; font-size: 18px;
+        }
+
+        .content-area { padding: 25px; max-width: 800px; margin: 0 auto; }
+
+        /* Estilizando a sua frase como um comentário elegante */
+        .dedicatoria { 
+            color: var(--comment); font-style: italic; font-size: 16px;
+            line-height: 1.6; margin-bottom: 40px; border-left: 3px solid var(--comment);
+            padding-left: 20px;
+        }
+
+        .gallery { display: flex; flex-direction: column; gap: 40px; }
+        
+        .photo-card { 
+            background: #252526; border-radius: 15px; overflow: hidden;
+            border: 1px solid #3e3e3e; box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .father-photo { width: 100%; display: block; height: auto; transition: transform 0.3s; }
+        .father-photo:hover { transform: scale(1.02); }
+
+        .caption { 
+            padding: 20px; font-size: 14px; color: #aaa; text-align: center;
+            font-style: italic; background: #1e1e1e; border-top: 1px solid #333;
+        }
 
         @media (max-width: 600px) { 
-            .sidebar, .line-numbers { display: none; }
-            .code-content { width: 100%; font-size: 12px; }
-            .father-photo { max-width: 100%; }
+            .sidebar { display: none; }
+            .birthday-header { font-size: 15px; padding: 15px; }
+            .dedicatoria { font-size: 14px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">📁<br><br>🔍<br><br>⚙️</div>
-        <div class="editor">
-            <h1>AniversarioPai.java</h1>
-            <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28</div>
-            <div class="code-content"><span class="keyword">package</span> br.com.familia.andrade;
-
-<span class="comment">/**
- * Feliz aniversario Pai. Não consigo dizer o quanto 
- * te amo em palavras então, tentarei colocar em 
- * forma de codigo.
- */</span>
-<span class="keyword">public class</span> <span style="color: #4ec9b0;">HomenagemCompleta</span> {
-
-    <span class="keyword">public static void</span> <span class="func">main</span>(String[] args) {
+        <div class="sidebar">📄<br><br>⚙️</div>
         
-        <span class="comment">// Galeria de Memórias</span>
-        <div class="gallery">
-            <div class="photo-card">
-                <img src="foto1.jpg" class="father-photo">
-                <div class="caption">Sempre ao meu lado.</div>
+        <div class="editor">
+            <div class="birthday-header">
+                🎂 Feliz Aniversário, Pai! ❤️
             </div>
-            <div class="photo-card">
-                <img src="foto2.jpg" class="father-photo">
-                <div class="caption">Exemplo de força e alegria!</div>
-            </div>
-            <div class="photo-card">
-                <img src="foto3.jpg" class="father-photo">
-                <div class="caption">Onde tudo começou. Sempre meu herói!</div>
-            </div>
-        </div>
 
-        System.out.<span class="func">println</span>(<span class="string">"Status: AMOR_INFINITO"</span>);
-    }
-}</div>
+            <div class="content-area">
+                <div class="dedicatoria">
+                    /* <br>
+                    &nbsp;* Feliz aniversario Pai. Não consigo dizer o quanto <br>
+                    &nbsp;* te amo em palavras então, tentarei colocar em <br>
+                    &nbsp;* forma de codigo.<br>
+                    &nbsp;*/
+                </div>
+
+                <div class="gallery">
+                    <div class="photo-card">
+                        <img src="foto1.jpg" class="father-photo">
+                        <div class="caption">Sempre ao meu lado em todos os momentos.</div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="foto2.jpg" class="father-photo">
+                        <div class="caption">Exemplo de força e alegria!</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <img src="foto3.jpg" class="father-photo">
+                        <div class="caption">Onde tudo começou. Sempre meu herói!</div>
+                    </div>
+                </div>
+
+                <p style="color: #569cd6; font-size: 12px; margin-top: 50px; text-align: center; opacity: 0.6;">
+                    System.out.println("Status: AMOR_INFINITO");
+                </p>
+            </div>
         </div>
     </div>
 </body>
